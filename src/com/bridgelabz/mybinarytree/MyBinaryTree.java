@@ -1,13 +1,14 @@
 package com.bridgelabz.mybinarytree;
 import com.bridgelabz.linkedlist.*;
 
-	public class MyBinaryTree<K extends Comparable<K>>  {
-		
+	public class MyBinaryTree<K extends Comparable<K>> 
+	{
 		private MyBinaryNode<K> root;
 		
 		private MyBinaryNode<K> addRecursively(MyBinaryNode<K> current, K key){
 			
-			if(current == null) {
+			if(current == null) 
+			{
 				return new MyBinaryNode<K>(key);
 			}
 			
