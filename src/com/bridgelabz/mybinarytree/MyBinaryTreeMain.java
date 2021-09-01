@@ -18,9 +18,9 @@ public class MyBinaryTreeMain {
 		myBinaryTree.add(16);
 		myBinaryTree.add(63);
 		myBinaryTree.add(67);
-		
+		int searchValue =63;
 		myBinaryTree.printBinaryTree();
 		System.out.println("The Size of the Binary Tree is : "+myBinaryTree.getSize());
-
+		System.out.println("Return true if " +searchValue+ " present ? --> " +myBinaryTree.searchTree(searchValue));
 	}
 }
