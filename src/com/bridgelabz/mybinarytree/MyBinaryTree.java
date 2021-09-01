@@ -37,6 +37,24 @@ import com.bridgelabz.linkedlist.*;
 			return this.getSizeRecursively(root);
 		}
 		
+		
+		private boolean searchTreeRecursively(MyBinaryNode<K> current, K key) {
+			if (current == null) {
+				return false;
+			}
+			int compareResult = key.compareTo(current.key);
+			if (compareResult == 0) {
+				return true;
+			}
+			return compareResult < 0 ? searchTreeRecursively(current.left, key) : searchTreeRecursively(current.right, key);
+		}
+
+		public boolean searchTree(K key) {
+			return searchTreeRecursively(root, key);
+		}
+
+
+		
 		public void printBinaryTree() {
 			System.out.println("My Tree: " + root);
 		}
